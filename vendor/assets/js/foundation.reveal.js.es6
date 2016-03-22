@@ -95,7 +95,7 @@ class Reveal {
     var $overlay = $('<div></div>')
                     .addClass('reveal-overlay')
                     .attr({'tabindex': -1, 'aria-hidden': true})
-                    .appendTo('body');
+                    .appendTo(id);
     return $overlay;
   }
 
