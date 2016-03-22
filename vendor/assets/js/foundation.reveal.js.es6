@@ -78,7 +78,7 @@ class Reveal {
     if(this.$overlay) {
       this.$element.detach().appendTo(this.$overlay);
     } else {
-      this.$element.detach().appendTo($('form'));
+      this.$element.detach().appendTo($('form', 'body'));
       this.$element.addClass('without-overlay');
     }
     this._events();
@@ -95,7 +95,7 @@ class Reveal {
     var $overlay = $('<div></div>')
                     .addClass('reveal-overlay')
                     .attr({'tabindex': -1, 'aria-hidden': true})
-                    .appendTo('form');
+                    .appendTo('form', 'body');
     return $overlay;
   }
 
